@@ -17,12 +17,11 @@ const PessoaSchema = new mongoose.Schema ({
     nascimento: {
         type: Date,
     },
-    createdAt: {
+    criadoEm: {
         type: Date,
         default: Date.now,
-    },
+    }
 });
-
 PessoaSchema.plugin(mongoosePaginate);
 
 mongoose.model('Pessoa', PessoaSchema);
